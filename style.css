@@ -1,0 +1,188 @@
+/* Remove tab bar styles */
+.tab-bar, #tabs, .tab, .tab.active, .tab .close-btn, #new-tab, #bookmarks-btn, #webviews-container, #webviews-container webview, #webviews-container webview.active {
+	display: none !important;
+}
+/* Tab bar styles */
+.tab-bar {
+	display: flex;
+	align-items: center;
+	background: #23272e;
+	border-bottom: 1px solid #23283a;
+	height: 38px;
+	padding: 0 6px;
+	user-select: none;
+}
+#tabs {
+	display: flex;
+	flex: 1;
+	align-items: stretch;
+	overflow-x: auto;
+}
+.tab {
+	display: flex;
+	align-items: center;
+	background: #23272e;
+	color: #b0b0b0;
+	border-radius: 7px 7px 0 0;
+	margin-right: 4px;
+	padding: 0 18px 0 10px;
+	height: 32px;
+	font-size: 1em;
+	cursor: pointer;
+	position: relative;
+	transition: background 0.18s, color 0.18s;
+	min-width: 80px;
+	max-width: 220px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.tab.active {
+	background: #181a1b;
+	color: #fff;
+}
+.tab .close-btn {
+	margin-left: 10px;
+	background: none;
+	border: none;
+	color: #b0b0b0;
+	font-size: 1.1em;
+	cursor: pointer;
+	border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.18s;
+}
+.tab .close-btn:hover {
+	background: #23283a;
+	color: #ff5f56;
+}
+#new-tab, #bookmarks-btn {
+	margin-left: 6px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	cursor: pointer;
+	transition: background 0.18s;
+}
+#new-tab:hover, #bookmarks-btn:hover {
+	background: #23283a;
+}
+
+#webviews-container {
+	position: absolute;
+	top: 86px;
+	left: 0;
+	width: 100vw;
+	height: calc(100vh - 86px);
+	background: #181a1b;
+}
+#webviews-container webview {
+	width: 100vw;
+	height: 100%;
+	display: none;
+}
+#webviews-container webview.active {
+	display: block;
+}
+/* History button matches nav buttons */
+#history-btn {
+	background: transparent;
+	border: none;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 4px;
+	transition: background 0.18s;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+}
+#history-btn svg {
+	display: block;
+}
+#history-btn:hover {
+	background: #23283a;
+}
+#history-btn:active {
+	background: #1a1d26;
+}
+/* Tab bar styles removed */
+
+body {
+	margin: 0;
+	background: #181a1b;
+	color: #e0e0e0;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.browser-bar {
+	display: flex;
+	align-items: center;
+	background: #23272e;
+	padding: 6px 8px;
+	border-bottom: 1px solid #22242a;
+	box-shadow: 0 2px 6px 0 #000a;
+}
+
+#url {
+	flex: 1;
+	margin: 0 8px;
+	padding: 8px 12px;
+	border-radius: 6px;
+	border: 1px solid #363a43;
+	background: #23272e;
+	color: #e0e0e0;
+	font-size: 1em;
+	outline: none;
+	transition: border 0.2s, background 0.2s;
+}
+#url:focus {
+	border: 1.5px solid #4f8cff;
+	background: #23283a;
+}
+
+
+button {
+	background: transparent;
+	border: none;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 4px;
+	transition: background 0.18s;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+}
+button svg {
+	display: block;
+}
+button:hover {
+	background: #23283a;
+}
+button:active {
+	background: #1a1d26;
+}
+
+webview {
+	border: none;
+	background: #181a1b;
+}

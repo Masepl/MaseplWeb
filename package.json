@@ -1,0 +1,25 @@
+{
+  "name": "masepl-web",
+  "productName": "Masepl Web",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "files": [
+      "**/*"
+    ],
+    "mac": {
+      "sign": false
+    },
+    "win": {
+      "icon": "icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.2.3",
+    "electron-builder": "^26.0.12"
+  }
+}

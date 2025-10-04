@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Masepl Web - Start Page</title>
+  <style>
+    body { background: #181a1b; color: #e0e0e0; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+    .main-title { font-size: 2.6em; font-weight: bold; margin-bottom: 0.2em; }
+    .subtitle { font-size: 1.1em; color: #b0b0b0; margin-bottom: 2.5em; }
+    .search-box { display: flex; align-items: center; background: #23272e; border-radius: 8px; padding: 10px 18px; box-shadow: 0 2px 12px #0006; }
+    .search-box input { background: #23272e; color: #e0e0e0; border: none; outline: none; font-size: 1.2em; padding: 8px 12px; border-radius: 6px; width: 320px; }
+    .search-box button { background: #4f8cff; color: #fff; border: none; border-radius: 6px; padding: 8px 22px; font-size: 1.1em; margin-left: 10px; cursor: pointer; transition: background 0.18s; }
+    .search-box button:hover { background: #3a6ed8; }
+    @media (max-width: 500px) { .search-box input { width: 140px; } }
+  </style>
+</head>
+<body>
+  <div class="main-title">Masepl Web</div>
+  <div class="subtitle">made by Masepl Studio</div>
+  <form class="search-box" id="duck-search">
+    <input type="text" id="duck-query" placeholder="Search DuckDuckGo..." autocomplete="off" />
+    <button type="submit">Search</button>
+  </form>
+  <script>
+    document.getElementById('duck-search').onsubmit = function(e) {
+      e.preventDefault();
+      var q = document.getElementById('duck-query').value.trim();
+      if(q) {
+        window.location.href = 'https://duckduckgo.com/?q=' + encodeURIComponent(q);
+      }
+    };
+  </script>
+</body>
+</html>
